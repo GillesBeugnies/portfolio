@@ -17,7 +17,10 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -32,6 +35,12 @@ body {
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Match the roomier desktop feel of viewing the site at 110% browser zoom. */
@@ -134,6 +143,10 @@ a { color: inherit; }
 }
 
 @media (max-width: 620px) {
+  .nav {
+    padding: 16px var(--gutter);
+  }
+
   .nav__links { display: none; }
 }
 
@@ -157,11 +170,20 @@ section {
   margin: 0 0 28px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
 }
 
 .coord {
   font-family: var(--font-mono-fam);
+  display: inline-block;
+  width: 42px;
+  flex: 0 0 42px;
+  text-align: left;
+  color: var(--accent);
 }
 
 .reveal {
@@ -237,9 +259,22 @@ section {
   .hero {
     grid-template-columns: 1fr;
     gap: 32px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
+
   .hero__photo {
     max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero__stack {
+    font-size: clamp(44px, 16vw, 64px);
+  }
+
+  .hero__lede {
+    font-size: 17px;
+    margin-bottom: 30px;
   }
 }
 
@@ -317,9 +352,7 @@ section {
   grid-column: 2;
 }
 
-.project:nth-of-type(even) {
-  grid-template-columns: 1.1fr 0.9fr;
-}
+
 
 .project:nth-of-type(even) .project__body {
   grid-column: 1;
@@ -533,14 +566,72 @@ section {
 }
 
 @media (max-width: 760px) {
+  main {
+    padding: 0 18px;
+  }
+
+  section {
+    padding: 72px 0;
+  }
+
+  .section-label {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
   .project {
     grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 42px 0;
   }
+
   .project__index { padding-top: 0; margin-bottom: 10px; }
-  .project__media { grid-column: 1; margin-bottom: 22px; }
+  .project__media {
+    grid-column: 1;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: none;
+  }
   .project__body { grid-column: 1; }
   .project:nth-of-type(even) .project__media { grid-column: 1; }
   .project:nth-of-type(even) .project__body { grid-column: 1; grid-row: auto; }
+  .project__carousel {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    overflow: hidden;
+    background: var(--accent-soft);
+  }
+
+  .project__carousel img {
+    max-height: none;
+    height: 100%;
+    object-fit: cover;
+    background: var(--surface);
+  }
+}
+
+@media (max-width: 480px) {
+  .project__carousel {
+    aspect-ratio: 5 / 4;
+  }
+
+  .project__tags {
+    gap: 6px;
+  }
+
+  .project__tags li {
+    padding: 4px 7px;
+  }
+
+  .project__desc {
+    line-height: 1.55;
+  }
+
+  .project__meta {
+    letter-spacing: 0.02em;
+  }
 }
 
 /* ---------- skills ---------- */
@@ -582,7 +673,7 @@ section {
 }
 
 .skills-section .section-label {
-  padding-left: var(--gutter);
+  padding-left: 0;
 }
 
 .marquee {
@@ -738,5 +829,40 @@ section {
 }
 
 @media (max-width: 480px) {
-  .footer { flex-direction: column; gap: 6px; }
+  :root {
+    --gutter: 18px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__title {
+    font-size: 24px;
+  }
+
+  .project__desc,
+  .about__text,
+  .contact__text {
+    font-size: 16px;
+  }
+
+  .contact__links {
+    flex-direction: column;
+  }
+
+  .contact__link {
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 20px;
+  }
 }
