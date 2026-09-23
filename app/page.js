@@ -21,13 +21,13 @@ export default function Home() {
 </div>
           <div className="hero__copy">
             <h1 className="hero__stack">
-              <span>XR</span>
-              <span className="hero__stack-accent">Developer</span>
+              
+              <span className="hero__stack-accent">XR Developer / Software engineer</span>
             </h1>
             <p className="hero__lede">
               I&apos;m Gilles Beugnies, a recent XR Developer graduate from
               Howest. I care about one question: how do AI glasses and XR
-              make people feel more connected and Productive — not less?
+              make people feel more connected and Productive  not less?
             </p>
             <div className="hero__actions">
               <a href="#work" className="btn btn--primary">
@@ -50,10 +50,10 @@ export default function Home() {
               Creative Technologies programme, XR Developer track, in
               Kortrijk. Across school and personal projects I&apos;ve built
               spatial interfaces, indoor navigation for accessibility, and
-              hands-free assistance tools — always circling the same idea:
+              hands free assistance tools  always circling the same idea:
               technology should shrink the distance between people, not add
               another screen between them. I&apos;m currently looking for my
-              first role in XR/AR, based near Antwerp.
+              first role in software engineering, based near Antwerp.
             </p>
           </section>
         </Reveal>

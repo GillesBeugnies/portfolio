@@ -12,6 +12,7 @@ export const projects = [
       "A web app co-developed with  Lennard Verhaege, Hanne Hellin, and Jens Vanderstraeten  for Sport Vlaanderen's Sportkompas programme, which helps children discover sports that suit them through two tests: \"I Like\" (a playful questionnaire) and \"I Do\" (physical challenges). We digitised part of the physical testing and integrated the teacher dashboard into a tablet-friendly interface: a teacher dashboard for managing classes and students, and a student view where kids join with a six-digit PIN, pick their name, and start a test — complete with example videos and a playful visual style matched to the \"I Like\" experience.",
     tags: [
       "Azure",
+      "C#",
       "HTML",
       "CSS",
       "JavaScript",
