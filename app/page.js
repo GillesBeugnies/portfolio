@@ -50,7 +50,7 @@ export default function Home() {
               Creative Technologies programme, XR Developer track, in
               Kortrijk. Across school and personal projects I&apos;ve built
               spatial interfaces, indoor navigation for accessibility, and
-              hands free assistance tools  always circling the same idea:
+              hands free assistance tools always circling the same idea:
               technology should shrink the distance between people, not add
               another screen between them. I&apos;m currently looking for my
               first role in software engineering, based near Antwerp.
@@ -90,8 +90,7 @@ export default function Home() {
               layer together.
             </h2>
             <p className="contact__text">
-              Looking for XR/AR roles near Antwerp — open to remote and
-              hybrid too. Reach out however&apos;s easiest for you.
+              Looking for XR/AR/software engineering roles near Antwerp. Reach out however&apos;s easiest for you.
             </p>
             <div className="contact__links">
               <a
@@ -124,7 +123,7 @@ export default function Home() {
       <TextMarquee text="let's connect" speed={20} />
 
       <footer className="footer">
-        <p>© 2026 - Gilles Beugnies — XR Developer</p>
+        <p>© 2026 - Gilles Beugnies — XR Developer / Software engineer</p>
       </footer>
     </>
   );
