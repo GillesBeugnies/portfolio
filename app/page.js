@@ -22,7 +22,7 @@ export default function Home() {
           <div className="hero__copy">
             <h1 className="hero__stack">
               
-              <span className="hero__stack-accent">XR Developer / Software engineer</span>
+              <span className="hero__stack-accent">XR Developer / Software Engineer</span>
             </h1>
             <p className="hero__lede">
               I&apos;m Gilles Beugnies, a recent XR Developer graduate from
@@ -53,7 +53,7 @@ export default function Home() {
               hands free assistance tools always circling the same idea:
               technology should shrink the distance between people, not add
               another screen between them. I&apos;m currently looking for my
-              first role in software engineering, based near Antwerp.
+              first role in Software Engineering, based near Antwerp.
             </p>
           </section>
         </Reveal>
@@ -90,7 +90,7 @@ export default function Home() {
               layer together.
             </h2>
             <p className="contact__text">
-              Looking for XR/AR/software engineering roles near Antwerp. Reach out however&apos;s easiest for you.
+              Looking for XR/AR/Software Engineering roles near Antwerp. Reach out however&apos;s easiest for you.
             </p>
             <div className="contact__links">
               <a
@@ -123,7 +123,7 @@ export default function Home() {
       <TextMarquee text="let's connect" speed={20} />
 
       <footer className="footer">
-        <p>© 2026 - Gilles Beugnies — XR Developer / Software engineer</p>
+        <p>© 2026 - Gilles Beugnies — XR Developer / Software Engineer</p>
       </footer>
     </>
   );
