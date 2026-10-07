@@ -74,6 +74,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
           }}
         />
+        <meta name="google-site-verification" content="chhsC9iHVo8N36L-JViIw084TD9vOPlRiC7gie44k08" />
       </head>
       <body>{children}</body>
     </html>
