@@ -497,6 +497,14 @@ section {
   border: 1px solid var(--line);
 }
 
+.experience {
+  padding: 0 0 8px;
+}
+
+.experience:not(:last-child) {
+  margin-bottom: 48px;
+}
+
 .project__meta {
   font-family: var(--font-mono-fam);
   font-size: 12px;

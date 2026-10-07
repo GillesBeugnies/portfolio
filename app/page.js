@@ -4,7 +4,7 @@ import Reveal from "./components/Reveal";
 import ProjectCard from "./components/ProjectCard";
 import Marquee from "./components/Marquee";
 import TextMarquee from "./components/TextMarquee";
-import { projects, skillsMarquee } from "./data";
+import { experience, projects, skillsMarquee } from "./data";
 
 export default function Home() {
   return (
@@ -15,10 +15,8 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero__photo">
-  <img 
-    src="/images/Face.png" 
-  />
-</div>
+            <img src="/images/Face.png" alt="Portrait of Gilles Beugnies" />
+          </div>
           <div className="hero__copy">
             <h1 className="hero__stack">
               
@@ -27,7 +25,7 @@ export default function Home() {
             <p className="hero__lede">
               I&apos;m Gilles Beugnies, a recent XR Developer graduate from
               Howest. I care about one question: how do AI glasses and XR
-              make people feel more connected and Productive  not less?
+              make people feel more connected and more productive, not less?
             </p>
             <div className="hero__actions">
               <a href="#work" className="btn btn--primary">
@@ -50,7 +48,7 @@ export default function Home() {
               Creative Technologies programme, XR Developer track, in
               Kortrijk. Across school and personal projects I&apos;ve built
               spatial interfaces, indoor navigation for accessibility, and
-              hands free assistance tools always circling the same idea:
+              hands-free assistance tools, always circling the same idea:
               technology should shrink the distance between people, not add
               another screen between them. I&apos;m currently looking for my
               first role in Software Engineering, based near Antwerp.
@@ -59,9 +57,34 @@ export default function Home() {
         </Reveal>
 
         <Reveal>
+          <section id="experience">
+            <p className="section-label">
+              <span className="coord">02</span>Experience
+            </p>
+            {experience.map((job) => (
+              <article key={job.title} className="experience">
+                <p className="project__meta">
+                  {job.location}
+                  {job.period ? ` · ${job.period}` : ""}
+                </p>
+                <h3 className="project__title">
+                  {job.title}, {job.company}
+                </h3>
+                <p className="project__desc">{job.description}</p>
+                <ul className="project__tags">
+                  {job.tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </section>
+        </Reveal>
+
+        <Reveal>
           <section id="work">
             <p className="section-label">
-              <span className="coord">02</span>Projects
+              <span className="coord">03</span>Projects
             </p>
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project}  />
@@ -72,7 +95,7 @@ export default function Home() {
         <Reveal>
           <section id="skills" className="skills-section">
             <p className="section-label">
-              <span className="coord">03</span>Skills
+              <span className="coord">04</span>Skills
             </p>
             <Marquee items={skillsMarquee} speed={32} />
             <Marquee items={[...skillsMarquee].reverse()} speed={38} />
@@ -82,7 +105,7 @@ export default function Home() {
         <Reveal>
           <section id="contact">
             <p className="section-label">
-              <span className="coord">04</span>Contact
+              <span className="coord">05</span>Contact
             </p>
             <h2 className="contact__title">
               Let&apos;s build the next
@@ -108,6 +131,8 @@ export default function Home() {
                 href="https://www.linkedin.com/in/gilles-beugnies/"
                 className="contact__link"
                 aria-label="LinkedIn profile"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M6.5 8.5V18M6.5 5.8v.1M10.5 18v-5.3c0-2.3 1.4-3.7 3.3-3.7 2.1 0 3.7 1.3 3.7 4.4V18M10.5 12.2C10.5 10 12 9 13.8 9" />
