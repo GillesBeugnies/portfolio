@@ -50,7 +50,7 @@ export const projects = [
     title: "iNav — Indoor Navigation Research",
     imageLabel: "iNav — screenshot",
     image: "/images/Spatial_navigation.png",
-    link: "https://youtu.be/_6qBP4j-4Eg",
+    link: "https://youtu.be/pfMXBnl_heQ",
     linkLabel: "Watch demo on YouTube",
     description:
       "A research project exploring indoor navigation for visually impaired people using spatial audio and accessibility features on Apple Vision Pro, guiding someone through a building by sound alone, without pulling their attention away from the world around them.",
