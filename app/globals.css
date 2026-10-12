@@ -725,7 +725,7 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee__track { animation: none; }
+  .marquee__track { animation-duration: 120s !important; }
 }
 
 
@@ -766,7 +766,7 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .text-marquee__track { animation: none; }
+  .text-marquee__track { animation-duration: 90s !important; }
 }
 
 /* ---------- contact ---------- */
